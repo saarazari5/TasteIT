@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lockable_scrollView"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Details.DetailsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.4" />
+
+                <ImageView
+                    android:id="@+id/selected_img"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/imageselected"
+                    android:layoutDirection="ltr"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:src="@drawable/salt_bae_100" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3">
+
+                        <include layout="@layout/place_details_fragment_options_bar" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.Guideline
+
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="899dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layoutDirection="ltr"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="@+id/selected_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/rating"
+                    android:layout_width="44dp"
+                    android:layout_height="31dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/rating_button_style"
+                    android:drawableStart="@drawable/ic_baseline_star_24"
+                    android:text="@string/def_rating"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/cardView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layoutDirection="ltr"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                        <include layout="@layout/details_card" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_place_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="985dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

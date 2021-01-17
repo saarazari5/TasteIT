@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_near_me_24"
+        app:showAsAction="always"
+        android:title=""
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"
+        android:title="" />
+
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/ic_person_24"
+        app:showAsAction="always"
+        android:title="" />
+
+
+
+</menu>

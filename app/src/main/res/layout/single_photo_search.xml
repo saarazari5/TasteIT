@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="16dp"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/details_photo"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/photo_data" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

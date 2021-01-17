@@ -1,0 +1,105 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="bottomSheetStyle">@style/myBottomSheetBehavior</item>
+        <item name="colorPrimaryDark">@color/orange</item>
+        <item name="colorAccent">@color/light_orange</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+
+    <style name="AppThemeFirebaseAuth" parent="FirebaseUI">
+        <item name="android:actionBarStyle">@style/FirebaseAuthActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:layout_marginBottom">64dp</item>
+        <item name="colorPrimary">@color/light_orange</item>
+        <item name="colorPrimaryDark">@color/orange</item>
+        <item name="colorAccent">@color/light_orange</item>
+        <item name="colorControlNormal">@color/light_orange</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FirebaseAuthActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="myBottomSheetBehavior">
+        <item name="gestureInsetBottomIgnored">true</item>
+    </style>
+
+    <style name="BottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetBackground</item>
+    </style>
+
+    <style name="bottomSheetBackground" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="MainActivityTheme" parent="android:Theme.Material.Light.NoActionBar">
+    <!-- enable window content transitions -->
+    <item name="android:windowActivityTransitions">true</item>
+    <item name="android:windowBackground">@drawable/lunch_screen</item>
+    <!-- specify enter and exit transitions -->
+    <item name="android:windowEnterTransition">@transition/main_activity_slide</item>
+    <item name="android:windowExitTransition">@transition/main_activity_slide</item>
+    </style>
+
+    <style name="CameraXTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/camera_activity_slide</item>
+        <item name="android:windowExitTransition">@transition/camera_activity_slide</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="SeekBarStyle" parent="Widget.AppCompat.SeekBar">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:max">150</item>
+        <item name="android:progress">0</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:ems">3</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLength">3</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/defaultDistance</item>
+    </style>
+    <string name="defaultDistance" translatable="false">0</string>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="edit_number">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">0</item>
+        <item name="android:hint">0-150</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+
+    <style name="LikeBtnStyle">
+        <item name="icon_type">heart</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="icon_size">24dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="circle_start_color">@color/red</item>
+        <item name="circle_end_color">@color/white</item>
+        <item name="like_drawable">@drawable/ic_like</item>
+        <item name="unlike_drawable">@drawable/ic_unlike</item>
+
+    </style>
+
+</resources>

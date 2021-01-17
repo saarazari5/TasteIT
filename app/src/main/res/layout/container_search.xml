@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/search_appbar"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/search_toolbar"
+        android:layoutDirection="ltr"
+        android:background="@drawable/rounded_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:menu="@menu/search_toolbar_menu"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+    </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/navgraph_search"
+        app:defaultNavHost="true"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

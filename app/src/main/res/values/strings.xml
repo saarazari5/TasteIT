@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">TasteIT</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">search</string>
+    <string name="title_info">info</string>
+
+    <string name="positive_imgcap_btn">yes</string>
+    <string name="negative_imgcap_btn">no</string>
+
+    <string name="facebook_application_id" translatable="false">341292583888846</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">341292583888846</string>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="notifications">notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="logout" translatable="false">logout</string>
+    <string name="settings" translatable="false">settings</string>
+    <string name="log_in" translatable="false">log in</string>
+    <string name="do_you_like_the_picture" translatable="false">do you like the picture?</string>
+    <string name="city" translatable="false">city</string>
+    <string name="city_alg_distance" translatable="false">10</string>
+    <string name="search_settings" translatable="false">search settings</string>
+    <string name="snack_bar_permission" translatable="false">permission denied please give location permission to access this feature</string>
+    <string name="set_perm" translatable="false">set permission</string>
+    <string name="missed_perm" translatable="false">you cant use home feature without  location permission please go to setting and enable it or press the home button and accept the permission</string>
+    <string name="never_asked_again" translatable="false">you chose never asked again please go to application settings and enable so you can enjoy akk the features of the app</string>
+    <string name="request_dialog_message" translatable="false">you disable using location - our app allow you to find the best food of
+        your choice by using your current location please give us permission so you can full app features</string>
+    <string name="distance" translatable="false">distance</string>
+    <string name="defult" translatable="false">defult</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="image_data" translatable="false">image data</string>
+    <string name="imgcupture_ok" translatable="false">imgCupture_ok</string>
+    <string name="imgcancel" translatable="false">imgCancel</string>
+    <string name="likes" translatable="false">likes</string>
+    <string name="likes_num" translatable="false">likes_num</string>
+    <string name="img_info" translatable="false">img_info</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="km" translatable="false">km</string>
+    <string name="img_logo" translatable="false">img_logo</string>
+    <string name="welcome_to_tasteit" translatable="false">Welcome to tasteIT!</string>
+    <string name="reviews" translatable="false">reviews</string>
+    <string name="rating">Rating:</string>
+    <string name="phone_number" translatable="false">phone number</string>
+    <string name="default_link">google link:</string>
+    <string name="default_web">#saar.com</string>
+    <string name="website">website</string>
+    <string name="default_phone_number">00000000</string>
+    <string name="phone">phone:</string>
+    <string name="google_com">#google.com</string>
+    <string name="def_address">address</string>
+    <string name="def_vicinity">vicinity</string>
+    <string name="imageselected">imageSelected</string>
+    <string name="place_name">Place_name</string>
+    <string name="contact">contact</string>
+    <string name="def_rating">0.0</string>
+    <string name="price_level">price level</string>
+    <string name="open">open</string>
+    <string name="Close">Close</string>
+    <string name="query">query</string>
+    <string name="photo_data">photo data</string>
+    <string name="near_me">near me</string>
+    <string name="search_settings_explain">search place by your current city or by certain distance</string>
+    <string name="specify_the_distance_you_want_us_to_check_for_you">specify the distance you want us to check for you:</string>
+    <string name="hello_user">hello user</string>
+</resources>

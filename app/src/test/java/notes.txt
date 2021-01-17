@@ -1,0 +1,244 @@
+
+קוד בשביל להקפיץ דיאלוג לsetting
+
+  private static final int REQUEST_CHECK_SETTINGS = 1 ;
+
+    public static void checkLocSettings(Activity activity){
+        LocationRequest locationRequest = LocationRequest.create();
+        locationRequest.setInterval(10000);
+        locationRequest.setFastestInterval(5000);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder().addLocationRequest(locationRequest);
+        SettingsClient client = LocationServices.getSettingsClient(activity);
+        Task<LocationSettingsResponse> task = client.checkLocationSettings(builder.build());
+        task.addOnSuccessListener(locationSettingsResponse -> {
+            Toast.makeText(activity,"worked?!?",Toast.LENGTH_LONG).show();
+        });
+        task.addOnFailureListener(e -> {
+            if (e instanceof ResolvableApiException) {
+                // Location settings are not satisfied, but this can be fixed
+                // by showing the user a dialog.
+                try {
+                    // Show the dialog by calling startResolutionForResult(),
+                    // and check the result in onActivityResult().
+                    ResolvableApiException resolvable = (ResolvableApiException) e;
+                    resolvable.startResolutionForResult(activity,
+                            REQUEST_CHECK_SETTINGS);
+                } catch (IntentSender.SendIntentException sendEx) {
+                    // Ignore the error.
+                }
+            }
+        });
+    }
+
+
+           imageCapture.takePicture(
+                outputOptions,
+                ContextCompat.getMainExecutor(this),
+                object : ImageCapture.OnImageSavedCallback {
+                    override fun onError(exc: ImageCaptureException) {
+                        Log.e(TAG, "Photo capture failed: ${exc.message}", exc)
+                    }
+
+                    override fun onImageSaved(output: ImageCapture.OutputFileResults) {
+                        //scale down the image for faster load for db
+                        deScaleImage(output.savedUri)
+
+                        showCaptureImgDialog()
+
+                    }
+                })
+
+
+
+
+
+imageCapture.takePicture(cameraExecutor, object : ImageCapture.OnImageCapturedCallback() {
+            override fun onCaptureSuccess(image: ImageProxy) {
+                Glide.with(this@CameraXActivity)
+                    .asBitmap()
+                    .load(image.image)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .into(object:CustomTarget<Bitmap>(){
+                        override fun onResourceReady(
+                            resource: Bitmap,
+                            transition: Transition<in Bitmap>?
+                        ) {
+                          }
+
+                        override fun onLoadCleared(placeholder: Drawable?) {}})
+
+
+          }
+        })
+
+
+
+
+  Glide.with(context)
+                .asBitmap()
+                .load(uri)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(new CustomTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                        float aspectRatio =resource.getWidth() /
+                                (float) resource.getHeight();
+                        int width = 480;
+                        int height = Math.round(width / aspectRatio);
+                        Bitmap scaledResource=Bitmap.createScaledBitmap(resource,width,height,false);
+                        imgData.setImageBitmap(scaledResource);
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) { }
+                }));
+
+
+        mediaData.whereEqualTo(AppUtils.Address, getCityNameByAddress(address)).get()
+                    .addOnSuccessListener {
+                        if(it.isEmpty)return@addOnSuccessListener
+                        for (queryDocumentSnapshot in it) {
+                            imageData.add(queryDocumentSnapshot.toObject(ImageDatum::class.java))
+                        }
+                        callback.onResponse(imageData,null)
+                    }.addOnCanceledListener {
+                        callback.onResponse(null,null)
+                    }
+
+
+
+        val query=mediaData.whereLessThanOrEqualTo(AppUtils.Address, getCityNameByAddress(address))
+
+        query.addSnapshotListener { snapshots, e ->
+            if (e != null) {
+                callback.onResponse(null,e)
+                return@addSnapshotListener
+            }
+            if (snapshots==null||snapshots.isEmpty){
+                callback.onResponse(null,null)
+                return@addSnapshotListener
+            }
+            for (queryDocumentSnapshot in snapshots) {
+                imageData.add(queryDocumentSnapshot.toObject(ImageDatum::class.java))
+            }
+            for (dc in snapshots.documentChanges) {
+                when (dc.type) {
+                    DocumentChange.Type.MODIFIED -> {
+                        return@addSnapshotListener
+                    }
+                    DocumentChange.Type.REMOVED -> imageData.remove(dc.document.toObject(ImageDatum::class.java))
+                }
+            }
+            callback.onResponse(imageData,null)
+        }
+
+
+
+
+
+use NestedScrollView instead of ScrollView
+
+Please go through NestedScrollView reference document for more information.
+
+and add recyclerView.setNestedScrollingEnabled(false); to your RecyclerView
+
+
+
+           private fun configureListener(){
+                findViewById<View>(R.id.container).setOnTouchListener(object :
+                    OnSwipeTouchListener(this) {
+                    override fun onSwipeLeft() {
+                        if(mainVp.currentItem!=0)return
+                        startCamera()
+                    }
+                })
+
+            }
+
+
+
+
+
+
+
+
+
+                     homeRecycler.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                            bottomMargin = bmsBehaviour.peekHeight
+                        }
+
+                        rivate fun initBottomSheet(view: View, bmsBehaviour: BottomSheetBehavior<ConstraintLayout>) {
+                                initBehaviour(bmsBehaviour)
+                                val textMeasure:TextView=view.findViewById(R.id.tv_measure_system)
+                                textMeasure.visibility=View.INVISIBLE
+                                val etDistance = view.findViewById<EditText>(R.id.et_distance)
+                                etDistance.visibility=View.INVISIBLE
+                                val seekBar=view.findViewById<SeekBar>(R.id.seek_distance)
+                                seekBar.isEnabled=false
+                                seekBar.setOnSeekBarChangeListener(object : SeekBarChangeAdapter() {
+                                    override fun onProgressChanged(p0: SeekBar?, p1: Int, fromUser: Boolean) {
+                                        distanceProgress=seekBar.progress
+                                        if (fromUser) {
+                                            etDistance.setText(seekBar.progress.toString())
+                                        }
+                                    }
+                                })
+
+                                etDistance.addTextChangedListener(object : TextWatcherAdapter() {
+                                    @SuppressLint("SetTextI18n")
+                                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                                        if (etDistance.text.toString() == "") {
+                                            etDistance.setText("0")
+                                        }
+                                        if (etDistance.text.toString().toInt() > 150) {
+                                            etDistance.setText("150")
+                                        }
+                                        seekBar.progress = etDistance.text.toString().toInt()
+                                        distanceProgress=seekBar.progress
+                                    }
+
+                                })
+
+                                view.findViewById<RadioGroup>(R.id.search_alg).setOnCheckedChangeListener { radioGroup, i ->
+                                    val radioButton: View = radioGroup!!.findViewById(i)
+                                    when (radioGroup.indexOfChild(radioButton)){
+                                        0 -> {
+                                            etDistance.visibility = View.INVISIBLE
+                                            textMeasure.visibility = View.INVISIBLE
+                                            seekBar.isEnabled = false
+                                            queryState = QueryStates.LOCALITY
+                                            deinitCurrentUserLocation()
+                                        }
+                                        1 -> {
+                                            etDistance.visibility = View.VISIBLE
+                                            textMeasure.visibility = View.VISIBLE
+                                            seekBar.isEnabled = true
+                                            queryState = QueryStates.DISTANCE
+                                            deinitCurrentUserLocation()
+
+                                        }
+                                    }
+                                }
+                            }
+
+
+
+
+                                private fun initBehaviour(bmsBehaviour: BottomSheetBehavior<ConstraintLayout>) {
+                                    bmsBehaviour.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+                                        override fun onStateChanged(bottomSheet: View, newState: Int) {
+                                            if (newState == BottomSheetBehavior.STATE_COLLAPSED){
+                                              getCurrentLocation()
+                                            }
+                                        }
+
+                                        override fun onSlide(bottomSheet: View, slideOffset: Float) {
+                                            val margin =
+                                                bmsBehaviour.peekHeight + (bottomSheet.height - bmsBehaviour.peekHeight) * slideOffset
+                                            homeRecycler.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                                                bottomMargin = margin.toInt()
+                                            }
+                                        }
+                                    })
+                                }
