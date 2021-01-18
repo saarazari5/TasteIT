@@ -7,6 +7,7 @@ development for the project have been mostly done. however, the project is curre
 
 ## Walkthrough - 
 ### logo:
+![ic_launcher-playstore](https://user-images.githubusercontent.com/51089069/104962209-9dcdf900-59e0-11eb-8143-9c39f30af48c.png)
 
 
 
