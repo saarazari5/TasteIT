@@ -13,8 +13,13 @@ development for the project have been mostly done. however, the project is curre
 ### Auth screen:
 ![WhatsApp Image 2021-01-18 at 23 01 05](https://user-images.githubusercontent.com/51089069/104962856-fbaf1080-59e1-11eb-95e8-21ca5f6eb99c.jpg)
 
-authentication available using phone number and sms verification , facebook , gmail , email and password verification 
+#### authentication available using phone number and sms verification , facebook , gmail , email and password verification 
 
 
+### near by - 
+
+![WhatsApp Image 2021-01-18 at 23 19 40](https://user-images.githubusercontent.com/51089069/104963933-2e5a0880-59e4-11eb-9e8a-b45ee8aedb33.jpg)
+
+![WhatsApp Image 2021-01-18 at 23 19 54](https://user-images.githubusercontent.com/51089069/104964012-534e7b80-59e4-11eb-80a0-cbaa72c53aea.jpg)
 
 
