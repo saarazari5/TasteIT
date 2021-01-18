@@ -27,4 +27,6 @@ development for the project have been mostly done. however, the project is curre
 
 
 ### search :
-https://user-images.githubusercontent.com/51089069/104965579-a83fc100-59e7-11eb-9025-cee4f7e1ef3b.mp4
+
+UI / UX example video - (notice the animations to allow the user slide up and down without toolbars Interfering him)
+https://user-images.githubusercontent.com/51089069/104965926-66fbe100-59e8-11eb-92cd-f03bde2717f1.mp4
