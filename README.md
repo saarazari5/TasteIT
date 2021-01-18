@@ -42,4 +42,8 @@ https://user-images.githubusercontent.com/51089069/104965926-66fbe100-59e8-11eb-
 ![WhatsApp Image 2021-01-19 at 00 10 23 (1)](https://user-images.githubusercontent.com/51089069/104967505-34ec7e00-59ec-11eb-8406-1e383f2bbb79.jpg)
 ![WhatsApp Image 2021-01-19 at 00 10 23 (2)](https://user-images.githubusercontent.com/51089069/104967566-5d747800-59ec-11eb-94d3-2722f56d0adf.jpg)
 
+### Profile : 
+#### Your profile page where you can go to see the images that you took and the images that you liked - click the image will send you to their details place.
+
+![WhatsApp Image 2021-01-19 at 00 42 11 (1)](https://user-images.githubusercontent.com/51089069/104968967-ffe22a80-59ef-11eb-98e5-bb98cca4bd5d.jpg)
 
