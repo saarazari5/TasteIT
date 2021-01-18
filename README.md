@@ -30,3 +30,6 @@ development for the project have been mostly done. however, the project is curre
 
 UI / UX example video - (notice the animations to allow the user slide up and down without toolbars Interfering him)
 https://user-images.githubusercontent.com/51089069/104965926-66fbe100-59e8-11eb-92cd-f03bde2717f1.mp4
+
+#### search allow the user to search for his food / cousine he like to eat in every place around the world with a smooth and easy ui/ux - scrool down until you find something Appetizing and than click it 
+![WhatsApp Image 2021-01-18 at 23 52 47](https://user-images.githubusercontent.com/51089069/104966287-2bade200-59e9-11eb-8612-26d0e4d22eaa.jpg)
