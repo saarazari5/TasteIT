@@ -5,6 +5,8 @@ an application used to find food by search perference and location . build with 
 ## Project status - 
 development for the project have been mostly done. however, the project is currently does not available at Play Store and has been suspended due to hight costs using various apis. 
 
+## Walkthrough - 
+### logo:
 
 
 
