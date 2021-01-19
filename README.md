@@ -62,12 +62,12 @@ https://user-images.githubusercontent.com/51089069/104965926-66fbe100-59e8-11eb-
  - Android studio 
  - FireStore 
  - FireBase Storage
- -FireBase GeoQuery 
- -kotlin coroutine 
- -smart location library 
- -Retrofit2 
- -google cloud places api
- -google material design 
+ - FireBase GeoQuery 
+ - kotlin coroutine 
+ - smart location library 
+ - Retrofit2 
+ - google cloud places api
+ - google material design 
  
  #### design patterns - 
  - Strategy design pattern (for uploading data to data base)
