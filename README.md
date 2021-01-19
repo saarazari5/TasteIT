@@ -75,6 +75,7 @@ https://user-images.githubusercontent.com/51089069/104965926-66fbe100-59e8-11eb-
  - Repository design pattern
  - Singelton 
  - Coroutine 
+ - State design pattern
  
  
 
